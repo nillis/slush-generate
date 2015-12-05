@@ -14,6 +14,10 @@ module.exports = (taskName, input) => {
       return gulp.src([__dirname + '/templates/' + taskName + '/**'])
         .pipe(template(answers))
         .pipe(rename(file => {
+          if (file.basename[0] === '_') {
+            file.basename = '.' + file.basename.slice(1);
+          }
+          
           file.dirname = file.dirname.replace('%name%', answers.name);
           file.basename = file.basename.replace('%name%', answers.name);
         }))
