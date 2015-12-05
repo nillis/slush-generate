@@ -1,6 +1,6 @@
 {
   "name": "slush-generate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A slush generator to generate a slush generator",
   "main": "slushfile.js",
   "keywords": [
